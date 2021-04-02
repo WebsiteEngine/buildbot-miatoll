@@ -1,20 +1,21 @@
 env: # Environt variable to pass to all tasks
     CIRRUS_CLONE_DEPTH: 1 # No need to clone with whole history
     CIRRUS_WORKING_DIR: "/tmp/ci" # Where to clone repo
-    rclone_config: "ENCRYPTED[ad333dd506b7527f4577e2d14dff5c6766e438feea8186ce4b5485f8dad89cae10f94c6a777646f388a0c1aac65c39a5"
+    rclone_config: "ENCRYPTED[1e4bfe76d933bdff3a61adb9529d60287b19bff7e61797b027ac3df52af879bb5a9d03d72cd0880ff1c01871b31d1e7a"
+
 
 task:
-    name: Lighthouse
+    name: Buildbomt
     timeout_in: 122m
     container:
       image: apon77/aosp:latest
-      cpu: 12
-      memory: 52G
+      cpu: 16
+      memory: 30G
     sync_script:
-      - ./sync
+      - bash sync
     build_script:
-      - ./build
+      - bash build
     upload_ccache_script:
-      - ./upload_ccache
+      - bash upload_ccache
 
-#start bu
+#start buuild 
