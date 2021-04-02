@@ -23,7 +23,7 @@ make_metalava(){
 }
 
 make_rom(){
-	make bacon -j16
+	brunch RMX2001
 	zip=$(up out/target/product/RMX2001/*zip) #make sure to edit miatoll---> your gay device
 	echo " "
 	echo "$zip"
