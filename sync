@@ -1,7 +1,7 @@
 #!/bin/bash
 sudo apt install wget
 MANIFEST=https://github.com/PixelPlusUI/manifest.git
-BRANCH=r11.0
+BRANCH=eleven
 
 mkdir -p /tmp/rom
 cd /tmp/rom
