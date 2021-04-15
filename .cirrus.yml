@@ -10,7 +10,7 @@ task:
     container:
       image: apon77/aosp:latest
       cpu: 8
-      memory: 52G
+      memory: 32G
     sync_script:
       - bash sync
     build_script:
